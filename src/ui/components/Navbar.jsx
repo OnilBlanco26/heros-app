@@ -1,26 +1,105 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import SearchPage from "../../heroes/components/SearchPage";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  
+
+  const handleLogout = () => {
+    navigate("/marvel", {
+      replace: true,
+    });
+  };
+
   return (
     <div>
-      <div className="navbar bg-base-300 rounded-lg">
-        <div className="flex-1">
-          <NavLink to={'/'} className={ ({isActive}) => `btn btn-ghost normal-case text-xl ${isActive ? 'text-red-500': ''}`}>ASOCIACIONES</NavLink>
+      <div className="navbar justify-between bg-base-300 rounded-lg ">
+        {/* <div className="hidden xxs:block flex-1">
+          <NavLink
+            to={"/"}
+            className={({ isActive }) =>
+              `btn btn-ghost normal-case text-sm md:text-xl ${
+                isActive ? "text-warning" : ""
+              }`
+            }
+          >
+            ASOCIACIONES
+          </NavLink>
+        </div> */}
+        <div className="hidden xxs:block flex-1">
+          <NavLink
+            to={"/marvel"}
+            className={({ isActive }) =>
+              `btn btn-ghost normal-case text-sm md:text-xl ${
+                isActive ? "text-warning  " : ""
+              }`
+            }
+          >
+            MARVEL
+          </NavLink>
         </div>
-        <div className="flex-1">
-          <NavLink to={'/marvel'}  className={ ({isActive}) => `btn btn-ghost normal-case text-xl  ${isActive ? 'text-red-500': ''}`}>MARVEL</NavLink>
+        <div className="hidden xxs:block flex-1">
+          <NavLink
+            to={"/dc"}
+            className={({ isActive }) =>
+              `btn btn-ghost normal-case text-sm md:text-xl  ${
+                isActive ? "text-warning" : ""
+              }`
+            }
+          >
+            DC COMICS
+          </NavLink>
         </div>
-        <div className="flex-1">
-          <NavLink to={'/dc'} className={ ({isActive}) => `btn btn-ghost normal-case text-xl  ${isActive ? 'text-red-500': ''}`}>DC COMICS</NavLink>
+        <div className="xxs:hidden dropdown dropdown-bottom">
+          <label tabIndex={0} className="btn m-1">
+            Click
+          </label>
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <NavLink
+                to={"/"}
+                className={({ isActive }) =>
+                  `btn btn-ghost normal-case text-sm md:text-xl ${
+                    isActive ? "text-warning" : ""
+                  }`
+                }
+              >
+                ASOCIACIONES
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to={"/marvel"}
+                className={({ isActive }) =>
+                  `btn btn-ghost normal-case text-sm md:text-xl ${
+                    isActive ? "text-warning  " : ""
+                  }`
+                }
+              >
+                MARVEL
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to={"/dc"}
+                className={({ isActive }) =>
+                  `btn btn-ghost normal-case text-sm md:text-xl  ${
+                    isActive ? "text-warning" : ""
+                  }`
+                }
+              >
+                DC COMICS
+              </NavLink>
+              F
+            </li>
+          </ul>
         </div>
         <div className="flex-none gap-2">
-          <div className="form-control">
-            <input
-              type="text"
-              placeholder="Search"
-              className="input input-bordered w-24 md:w-auto"
-            />
-          </div>
+              <SearchPage />
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
@@ -41,12 +120,14 @@ const Navbar = () => {
                 <a>Settings</a>
               </li>
               <li>
-                <NavLink to={'/login'}>Logout</NavLink>
+                <NavLink onClick={handleLogout} to={"/login"}>
+                  Logout
+                </NavLink>
               </li>
             </ul>
           </div>
         </div>
-      </div> 
+      </div>
     </div>
   );
 };
