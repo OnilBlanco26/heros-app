@@ -26,7 +26,7 @@ const HeroPage = () => {
         <div className="animate__animated animate__fadeInLeft">
           <img
             className="rounded-lg bg-contain"
-            src={`/assets/heroes/${heroId}.jpg`}
+            src={`/assets/hero-image/${heroId}.jpg`}
             alt=""
           />
         </div>
