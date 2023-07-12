@@ -59,7 +59,7 @@ const Navbar = () => {
             tabIndex={0}
             className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
+            {/* <li>
               <NavLink
                 to={"/"}
                 className={({ isActive }) =>
@@ -70,9 +70,10 @@ const Navbar = () => {
               >
                 ASOCIACIONES
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink
+              exact
                 to={"/marvel"}
                 className={({ isActive }) =>
                   `btn btn-ghost normal-case text-sm md:text-xl ${
