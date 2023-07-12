@@ -7,7 +7,7 @@ const HeroCard = ({ heroe }) => {
   const {  id,superhero, alter_ego, first_appearance, characters } =
     heroe;
 
-    const heroImageUrl = `./public/assets/hero-image/${id}.jpg`
+    const heroImageUrl = `/assets/hero-image/${id}.jpg`
 
   return (
     <div className="card card-side bg-base-100 shadow-xl w-[350px] md:w-[550px] h-auto mt-10 overflow-hidden flex-col xxs:flex-row">
