@@ -61,9 +61,9 @@ const HeroPage = () => {
           ))}
         </ul>
             <hr className="mt-4 h-3" />
-        <div className="flex justify-between">
+        <div className="flex flex-col sm:flex-row justify-between">
           <div className="flex flex-col justify-center items-center">
-            <h4 className="mx-2 text-2xl text-white font-bold">
+            <h4 className="mx-2 text-2xl text-white font-bold text-center">
               Team Afiliations
             </h4>
             <ul className="mx-4 ">
@@ -73,7 +73,7 @@ const HeroPage = () => {
             </ul>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <h4 className="mx-2 text-2xl text-white font-bold">
+            <h4 className="mx-2 text-2xl text-white font-bold text-center">
               Allies
             </h4>
             <ul className="mx-4 ">
@@ -83,7 +83,7 @@ const HeroPage = () => {
             </ul>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <h4 className="mx-2 text-2xl text-white font-bold">
+            <h4 className="mx-2 text-2xl text-white font-bold text-center">
               Archie Enemies
             </h4>
             <ul className="mx-4 ">
