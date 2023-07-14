@@ -14,7 +14,13 @@ const HeroCard = ({ heroe }) => {
   return (
     <div className="card card-side bg-base-100 shadow-xl w-[350px] md:w-[550px] h-auto mt-10 overflow-hidden flex-col xxs:flex-row">
       <figure className="w-full h-[300px] xxs:h-auto xxs:w-[200px] bg-top">
-        {!imageLoaded && <div>Cargando...</div>}
+        {!imageLoaded &&  <div className="w-full min-h-[60vh] h-full flex justify-center items-center">
+            <div
+              className="w-8 h-8 border-4 border-orange rounded-full border-b-gray-200 animate-spin"
+              role="status"
+            />
+            <span className="ml-2 ">Cargando Imagen...</span>
+          </div>}
         <img
           className={`bg-contain ${imageLoaded ? '' : 'hidden'}`}
           src={heroImageUrl}
