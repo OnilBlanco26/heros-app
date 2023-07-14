@@ -8,19 +8,11 @@ const AppRouter = () => {
   return (
     <div className="m-4">
       <Routes>
-        <Route path="/login" element={
-          <PublicRoute>
-              <LoginPage />
-          </PublicRoute>
-        }/>
+        <Route path="/login" />
 
         <Route
           path="/*"
-          element={
-            <PrivateRouter>
-             <HeroesRoutes />
-            </PrivateRouter>
-          }
+         
         />
       </Routes>
     </div>

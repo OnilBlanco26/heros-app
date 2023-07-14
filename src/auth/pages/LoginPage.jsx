@@ -11,7 +11,7 @@ const LoginPage = () => {
     const lastPath = localStorage.getItem('lastPath') || '/'
     
     login("Onil Blanco");
-    navigate('/marvel', {
+    navigate(lastPath, {
       replace: true,
     });
   };
