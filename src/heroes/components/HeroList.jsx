@@ -16,8 +16,9 @@ const HeroList = ({ publisher }) => {
  
   return (
     <>
+    
       {
-        filterHeros.length > 0 ? (  <div className="flex gap-2 justify-center items-center flex-wrap">
+        heroes && filterHeros.length > 0 ? (  <div className="flex gap-2 justify-center items-center flex-wrap">
         {filterHeros.map((heroe) => (
           <HeroCard key={heroe.id} heroe={heroe} />
         ))}

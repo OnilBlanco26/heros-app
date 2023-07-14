@@ -78,7 +78,7 @@ const Navbar = () => {
             </li> */}
             <li>
               <NavLink
-              exact
+             
                 to={"/marvel"}
                 className={({ isActive }) =>
                   `btn btn-ghost normal-case text-sm md:text-xl ${
