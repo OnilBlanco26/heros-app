@@ -1,13 +1,17 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import SearchPage from "../../heroes/components/SearchPage";
+import { useContext } from "react";
+import { AuthContext } from "../../auth/context/AuthContext";
 
 const Navbar = () => {
+  const {user, logout} = useContext(AuthContext)
   const navigate = useNavigate();
 
   
 
   const handleLogout = () => {
-    navigate("/marvel", {
+    logout()
+    navigate("/login", {
       replace: true,
     });
   };
@@ -29,6 +33,7 @@ const Navbar = () => {
         </div> */}
         <div className="hidden xxs:block flex-1">
           <NavLink
+           
             to={"/marvel"}
             className={({ isActive }) =>
               `btn btn-ghost normal-case text-sm md:text-xl ${
@@ -113,7 +118,7 @@ const Navbar = () => {
             >
               <li>
                 <a className="justify-between">
-                  Profile
+                  {user?.name}
                   <span className="badge">New</span>
                 </a>
               </li>

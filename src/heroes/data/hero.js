@@ -1,4 +1,4 @@
-const hero = [
+export const hero = [
     {
         "id": "marvel-spider",
         "superhero": "Spider-Man",
