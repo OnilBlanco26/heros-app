@@ -19,18 +19,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="navbar justify-between bg-base-300 rounded-lg ">
-        {/* <div className="hidden xxs:block flex-1">
-          <NavLink
-            to={"/"}
-            className={({ isActive }) =>
-              `btn btn-ghost normal-case text-sm md:text-xl ${
-                isActive ? "text-warning" : ""
-              }`
-            }
-          >
-            ASOCIACIONES
-          </NavLink>
-        </div> */}
+      
         <div className="hidden xxs:block flex-1">
           <NavLink
            

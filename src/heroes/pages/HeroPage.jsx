@@ -76,7 +76,7 @@ const HeroPage = () => {
             <h4 className="mx-2 text-2xl text-white font-bold text-center">
               Allies
             </h4>
-            <ul className="mx-4 ">
+            <ul className="mx-4 text-center">
               {heroe.allies.map((allie) => (
                 <li key={allie}>{allie}</li>
               ))}
