@@ -16,7 +16,7 @@ const HeroCard = ({ heroe }) => {
       <figure className="w-full h-[300px] xxs:h-auto xxs:w-[200px] bg-top">
         {!imageLoaded &&  <div className="w-full min-h-[60vh] h-full flex justify-center items-center">
             <div
-              className="w-8 h-8 border-4 border-orange rounded-full border-b-gray-200 animate-spin"
+              className="w-8 h-8 border-4 border-orange rounded-full border-orange-400 animate-spin"
               role="status"
             />
             <span className="ml-2 ">Cargando Imagen...</span>
